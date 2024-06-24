@@ -254,7 +254,7 @@ h1{
     position: absolute;
     width: 100px;
     height: 100px;
-    margin-top: -600px;
+    margin-top: -500px;
     transition: margin-left 1.5s ease-in-out;
     transform: rotateY(180deg);
 }

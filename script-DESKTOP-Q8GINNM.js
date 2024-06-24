@@ -153,11 +153,11 @@ function EscolherBarco(){
     cont = (cont % 4) +1}
 
     pexe[1].style.marginLeft = pexpos[1]+'px'
-    pexe[1].style.marginTop = '-650px'
+    pexe[1].style.marginTop = '-600px'
     pexe[2].style.marginLeft = pexpos[2]+'px'
     pexe[2].style.marginTop = '-550px'
     pexe[3].style.marginLeft = pexpos[3]+'px'
-    pexe[3].style.marginTop = '-610px'
+    pexe[3].style.marginTop = '-580px'
     
  }
  
