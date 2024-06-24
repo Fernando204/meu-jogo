@@ -1,0 +1,298 @@
+.mar{
+    margin-top: 50vh;
+    position: relative;
+    height: 600px;
+    width: 101vw;
+    background-color: rgba(0, 153, 255, 0.449);
+    margin-left: -9px;
+    z-index: 2;
+}
+.sol{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgb(251, 255, 0);
+    margin-left: 900px;
+    margin-top: 50px;
+}
+body{
+    background-color: lightblue;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+.player{
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    margin-left: 500px;
+    transition: left 0.7s linear; 
+    z-index: 2;
+}
+.barco{
+    width: 300px;
+    height: 80px;
+    position: relative;
+    margin-top: 405px;
+    border-bottom-right-radius: 130%;
+    border-bottom-left-radius: 130%;
+    border: solid rgb(94, 94, 94);
+    border-width: 1px;
+    z-index: 3;
+    transform-origin: left;
+}
+.mel{
+    position: absolute;
+    margin-top: 280px;
+    width: 100px;
+    margin-left: 100px;
+    z-index: 1;
+}
+.vara{
+    margin-top: 260px;
+    margin-left: 170px;
+    width: 170px;
+    position: absolute;
+    z-index: 2;
+}
+.ilha{
+    background-color: green;
+    width: 700px;
+    height: 300px;
+    margin-top: 17.1vh;
+    position: absolute;
+    z-index: 1;
+    border-top-left-radius: 90%;
+    border-top-right-radius: 90%;
+}
+.arvore{
+    width: 200px;
+    margin-top: -150px;
+    margin-left: 70px;
+}
+.ar2{
+    margin-left: 500px;
+}
+.nuvem{
+    position: absolute;
+    width: 1700px;
+    margin-top: -550px;
+    margin-left: -1500px;
+}
+@keyframes movimentodasnuvens {
+    0%{
+        margin-left: -1400px;
+    }
+    100%{
+        margin-left: 100%;
+    }
+}
+.entrada{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 98vw;
+    margin-top: -150px;
+    background-color: rgba(0, 0, 0, 0.397);
+    border: solid aquamarine;
+    z-index: 4;
+    border-radius: 40px;
+    border-width: 5px;
+    flex-direction: column;
+    color: aliceblue;
+    font-size: 30px;
+}
+button{
+    width: 200px;
+    height: 60px;
+    border-radius: 40px;
+    font-size: 30px;
+    margin-top: 30px;
+    border: solid aqua;
+    background-color: rgb(129, 129, 129);
+    cursor: pointer;
+}
+button:hover{
+    background-color: aqua ;
+    border: solid rgb(129, 129, 129);
+    cursor: pointer;
+}
+h1{
+    margin-top: -200px;
+}
+.linhaDaVara{
+    position: absolute;
+    background-color: black;
+    width: 0px;
+    height: 1.5px;
+    margin-left: 313px;
+    margin-top: 289px;
+    z-index: 2;
+    transition: width 2s, transform 1.5s;
+    transform-origin: left;
+}
+.EscBarco {
+    display: none;
+}
+.voltar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3px;
+    color: beige;
+    font-size: 40px;
+    font-weight: 400;
+    border: solid rgb(190, 190, 190);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.534);
+    border-radius: 10px;
+    margin-top: -710px;
+    margin-left: -1140px;
+}
+.voltar2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3px;
+    color: beige;
+    border: solid rgb(190, 190, 190);
+    font-size: 40px;
+    font-weight: 400;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.534);
+    border-radius: 10px;
+    margin-top: -510px;
+    margin-right: 500px;
+}
+.voltar:hover, .voltar2:hover{
+    color: aqua;
+    cursor: pointer;
+}
+.baE{
+    width: 80vw;
+    height: 80vh;
+    border: solid black;
+    position: absolute;
+}
+.BarcosAE{
+    margin-left: 20px;
+    width: 120px;
+    height: 100px;
+    border: solid white;
+}
+.cordebar{
+    width: 100px;
+    height: 27px;
+    margin-top: 20px;
+    border-bottom-right-radius: 130%;
+    border-bottom-left-radius: 130%;
+    z-index: 3;
+    transform-origin: left;
+}
+/*cor dos outros barcos*/
+.b0{
+    background-color: rgb(143, 58, 24);
+}
+.b1{
+    background-color: yellowgreen;
+}
+.b2{
+    background-color: blue;
+}
+/*organização do barco desenhado:*/
+.b31{
+    height: 32px;
+    background-size: 140px;
+}
+.b32{
+    background-size: 540px;
+    border: none;
+    height: 150px;
+    width: 400px;
+}
+.bv3{
+    margin-top: 280px;
+    margin-left: 220px;
+}
+.bm3{
+    margin-left: 180px;
+    margin-top: 33vh;
+}
+.bl3{
+    margin-left: 363px;
+    margin-top: 305px;
+}
+.b3{
+    background-image: url('barcoBrasil.png');
+    background-position: center;
+}
+/*botão de pause:*/
+.lin{
+    background-color: black;
+    width: 30px;
+    height: 5px;
+    margin-top: 3px;
+}
+.pausebt{
+    display: none;
+    position: absolute;
+    z-index: 5;
+}
+/*Peixes:*/
+.peixes{
+     background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-top: -600px;
+    transition: margin-left 1.5s ease-in-out;
+    transform: rotateY(180deg);
+}
+.carpaDef{
+    background-image: url("peixes/carpaDef.png");
+}
+.carpa{
+    background-image: url("peixes/carpa.png");
+}
+.ferupa{
+    background-image: url("peixes/ferupa.png");
+}
+.anzol{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    margin-left: 100%;
+}
+/*ao pescar o peixe isso vai aparecer:*/
+.peixe_pescado{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.397);
+    border: solid aquamarine;
+    z-index: 4;
+    border-radius: 40px;
+    border-width: 5px;
+    color: aliceblue;
+    font-size: 30px;
+    margin-top: -1200px;
+    margin-left: 300px;
+    width: 600px;
+    height: 550px;
+    padding: 40px;
+}
+.carpaImg{
+    width: 400px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jogo.css">
+    <title>mel´s fishing simulator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+<body>
+    
+    <div id="pause" class="pausebt">
+        <div class="lin"></div>
+        <div class="lin"></div>
+        <div class="lin"></div>
+    </div>
+    <div id="sol" class="sol"></div>
+   <div id="entri" class="entrada">
+    <h1><strong>MEL'S FISHING SIMULATOR</strong></h1>
+    
+        <button onclick="jogar()">
+            <strong>Jogar</strong>
+        </button>
+        <button onclick="EscolherBarco()">
+            <srong>Mudar Barco</srong>
+        </button>
+    </div>
+    <div id="escolhaDoBarco" class="entrada EscBarco">
+        <div id="btvolt" class="voltar">
+           x
+        </div>
+        <div class="baE">
+            <button class="BarcosAE">
+                <div class="cordebar b0"></div>
+            </button>
+            <button class="BarcosAE">
+                <div class="cordebar b1"></div>
+            </button>
+            <button class="BarcosAE">
+                <div class="cordebar b2"></div>
+            </button>
+            <button class="BarcosAE">
+                <div class="cordebar b3 b31"></div>
+            </button>
+        </div>
+    </div>
+    <img id="nuv" class="nuvem" src="nuvens.png">
+
+    <div class="ilha">
+        <img src="coconut-tree-png.webp" class="arvore">
+        <img src="coconut-tree-png.webp" class="arvore">
+        <img src="coconut-tree-png.webp" class="arvore ar2">
+    </div>
+
+    <div id="playe" class="player">
+        <img id="memel"  src="melz2.png" class="mel">
+        <img id="vrra" class="vara " src="8c4884337c076951dc3ad68b9de66723-peixe-de-pesca-com-vara-de-pesca.webp">  
+        <div id="linhaDavar" class="linhaDaVara"><div class="anzol"></div></div>
+        <div id="OBarco" class="barco b0"></div>
+    </div>
+    <div id="marr" class="mar">
+        
+    </div>
+    <div class="peixe_pescado">
+        <div id="btvolt" class="voltar2">
+            x
+         </div>
+        <h2>Peixe Pescado!!</h2>
+        <img src="peixes/carpaDef.png"  class="carpaImg">
+        <h3>carpa</h3>
+    </div>
+
+    <script src="script.js"></script>
+     
+</body>
+</html>
