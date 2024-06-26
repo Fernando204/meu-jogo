@@ -5,6 +5,7 @@ var posx = 0;
 var jogando = false
 var linhaVara = document.getElementById('linhaDavar')
 var sol = document.getElementById('sol')
+var estado_Da_Linha = "recolhida"
 //comandos para mover o barco
 function moverBarco(event){
    
@@ -13,7 +14,7 @@ function moverBarco(event){
         case 65:
         case 37:
             //mover para esquerda
-            if(posx>-500){
+            if(posx>-500 && estado_Da_Linha === "recolhida"){
             posx -= 30
             player.style.transform = 'rotateY(180deg)';
             player.style.left = posx+"px"}
@@ -21,13 +22,14 @@ function moverBarco(event){
         case 39:
         case 68:
             //mover para direita
-            if(posx<465){
+            if(posx<465 && estado_Da_Linha === "recolhida"){
             posx += 30
             player.style.transform = 'rotateY(0deg)';
             player.style.left = posx+"px"}
             break;
         case 69:
             // jogar anzol
+                estado_Da_Linha = "jogada"
                 linhaVara.style.width = '400px'
                 linhaVara.style.transform = 'rotate(60deg)'
                 console.log('posição da vara: '+window.getComputedStyle(linhaVara).marginLeft)
@@ -37,12 +39,17 @@ function moverBarco(event){
             break;
         case 81:
             //recolher anzol
-            linhaVara.style.width = '0px';
-            linhaVara.style.transform = 'rotate( 0deg)'
+            recolherAnzol();
             break;
             
     }
     console.log("keycode: "+event.keyCode)}
+}
+function recolherAnzol(){
+    //Recolher anzol
+      estado_Da_Linha = "recolhida"
+            linhaVara.style.width = '0px';
+            linhaVara.style.transform = 'rotate( 0deg)'
 }
 document.addEventListener('keydown', moverBarco)
 const entrada = document.getElementById('entri')
@@ -262,15 +269,40 @@ pe2dir = 'direita'
     );
  }
 const anzol = document.querySelector('.anzol')
+const telaDoPeixe =  document.querySelector('.peixe_pescado')
+const peixePescado = document.querySelector('.carpaImg')
+var qdpfisgados = 0
  function fisgar(){
-    if(pexeNoAnzol(pexe[0], anzol)){
-        pexe[0].remove()
-        document.querySelector('.peixe_pescado').style.display = 'flex'
+    for(var i = 0;i<pexe.length;i++){
+    if(pexeNoAnzol(pexe[i], anzol)){
+
+        qdpfisgados++
+
+        if(pexe[i].classList.contains('carpa')){
+        pexe[i].remove()
+        telaDoPeixe.style.display = 'flex'
+        peixePescado.src = "peixes/carpa.png"
+        } else if(pexe[i].classList.contains('carpaDef')){
+            pexe[i].remove()
+            telaDoPeixe.style.display = 'flex'
+            peixePescado.src = "peixes/carpaDef.png"
+        }
+    }}
+    
+    if(qdpfisgados >= 4){
+        ReAddPeixes();
+        alert('os peixes serão readicionados')
     }
  }
  setInterval(fisgar, 100)
+
  var btMP = document.querySelector('.voltar2')
  btMP.addEventListener('click', function(){
     document.querySelector('.peixe_pescado').style.display = 'none'
  })
- console.log("teste git")
+ function ReAddPeixes(){
+    //adicionar novamente os peixes
+        pexe = [];
+        quantidadePeixes = 0;
+        qdpfisgados = 0;
+ }
