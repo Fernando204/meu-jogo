@@ -273,3 +273,4 @@ const anzol = document.querySelector('.anzol')
  btMP.addEventListener('click', function(){
     document.querySelector('.peixe_pescado').style.display = 'none'
  })
+ console.log("teste git")
