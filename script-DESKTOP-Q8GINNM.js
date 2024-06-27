@@ -4,7 +4,6 @@ const player = document.getElementById('playe')
 var posx = 0;
 var jogando = false
 var linhaVara = document.getElementById('linhaDavar')
-var sol = document.getElementById('sol')
 var estado_Da_Linha = "recolhida"
 //comandos para mover o barco
 function moverBarco(event){
@@ -32,10 +31,6 @@ function moverBarco(event){
                 estado_Da_Linha = "jogada"
                 linhaVara.style.width = '400px'
                 linhaVara.style.transform = 'rotate(60deg)'
-                console.log('posição da vara: '+window.getComputedStyle(linhaVara).marginLeft)
-                var posvara = parseFloat(window.getComputedStyle(linhaVara).marginLeft)
-                console. log('peixe 1:'+ pexpos[0])
-                sol.innerHTML = 'distância entre eles:  '+ (pexpos[0]-posvara)
             break;
         case 81:
             //recolher anzol
@@ -248,12 +243,7 @@ pe2dir = 'direita'
     
         }else {
             pe2dir = 'direita'
-        }
-    }}}    
-    
-    
-    }
- }
+        }}}}}}
  setInterval(moverPeixes, 900)
 
  function pexeNoAnzol(anzo, pexe){
@@ -271,10 +261,11 @@ pe2dir = 'direita'
 const anzol = document.querySelector('.anzol')
 const telaDoPeixe =  document.querySelector('.peixe_pescado')
 const peixePescado = document.querySelector('.carpaImg')
-var qdpfisgados = 0
+telaDoPeixe.style.display = "none"
+var qdpfisgados = 0;
  function fisgar(){
     for(var i = 0;i<pexe.length;i++){
-    if(pexeNoAnzol(pexe[i], anzol)){
+    if(pexeNoAnzol(pexe[i], anzol) && telaDoPeixe.style.display === "none"){
 
         qdpfisgados++
 
@@ -282,10 +273,14 @@ var qdpfisgados = 0
         pexe[i].remove()
         telaDoPeixe.style.display = 'flex'
         peixePescado.src = "peixes/carpa.png"
+        telaDoPeixe.querySelector('h3').innerHTML = 'salmão'
+        aumentarPontuação(2)
         } else if(pexe[i].classList.contains('carpaDef')){
             pexe[i].remove()
             telaDoPeixe.style.display = 'flex'
             peixePescado.src = "peixes/carpaDef.png"
+            telaDoPeixe.querySelector('h3').innerHTML = 'carpa'
+            aumentarPontuação(1)
         }
     }}
     
@@ -298,11 +293,17 @@ var qdpfisgados = 0
 
  var btMP = document.querySelector('.voltar2')
  btMP.addEventListener('click', function(){
-    document.querySelector('.peixe_pescado').style.display = 'none'
+    telaDoPeixe.style.display = 'none'
  })
  function ReAddPeixes(){
     //adicionar novamente os peixes
         pexe = [];
         quantidadePeixes = 0;
         qdpfisgados = 0;
+ }
+ const pontuação = document.querySelector('.pontuação')
+ var pt = 0;
+ function aumentarPontuação(pontos){
+        pt += pontos  
+        pontuação.querySelector('h2').innerHTML = `Pontuação atual: ${pt}`
  }
