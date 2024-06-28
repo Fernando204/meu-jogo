@@ -42,6 +42,7 @@ function moverBarco(event){
 }
 function recolherAnzol(){
     //Recolher anzol
+    fisgar();
       estado_Da_Linha = "recolhida"
             linhaVara.style.width = '0px';
             linhaVara.style.transform = 'rotate( 0deg)'
@@ -163,7 +164,6 @@ function EscolherBarco(){
     pexe[3].style.marginTop = '-580px'
     
  }
- 
  setInterval(addPeixes, 2000)
 pe2dir = 'direita'
  function moverPeixes(){
@@ -194,7 +194,6 @@ pe2dir = 'direita'
         pexpos[1] -= 80;
         pexe[1].style.marginLeft = pexpos[1]+'px'
         
-
     } else if(pexpos[1] < 1110){
 
         pexDirection = 'esquerda';
@@ -213,7 +212,6 @@ pe2dir = 'direita'
             pexpos[2] -= 80;
             pexe[2].style.marginLeft = pexpos[2]+'px'
             
-    
         } else if(pexpos[2] < 1110){
     
             pe2dir = 'esquerda';
@@ -224,7 +222,6 @@ pe2dir = 'direita'
         }else {
             pe2dir = 'direita'
         }
-    
     //peixe 4:
     if(pexe.length > 3){
         
@@ -233,9 +230,7 @@ pe2dir = 'direita'
             pexe[3].style.transform = 'rotateY(180deg)';
             pexpos[3] += 80;
             pexe[3].style.marginLeft = pexpos[3]+'px'
-            
-    
-        } else if(pexpos[3] > 0){
+            } else if(pexpos[3] > 0){
     
             pe2dir = 'esquerda';
             pexe[3].style.transform = 'rotateY(0deg)';
@@ -258,18 +253,16 @@ pe2dir = 'direita'
         anzoRect.right < pexeRect.left
 
     );
- }
-const anzol = document.querySelector('.anzol')
-const telaDoPeixe =  document.querySelector('.peixe_pescado')
-const peixePescado = document.querySelector('.carpaImg')
-telaDoPeixe.style.display = "none"
+ };
+const anzol = document.querySelector('.anzol');
+const telaDoPeixe =  document.querySelector('.peixe_pescado');
+const peixePescado = document.querySelector('.carpaImg');
+telaDoPeixe.style.display = "none";
 var qdpfisgados = 0;
  function fisgar(){
     for(var i = 0;i<pexe.length;i++){
     if(pexeNoAnzol(pexe[i], anzol) && telaDoPeixe.style.display === "none"){
-
         qdpfisgados++
-
         if(pexe[i].classList.contains('carpa')){
         pexe[i].remove()
         telaDoPeixe.style.display = 'block'
@@ -282,15 +275,12 @@ var qdpfisgados = 0;
             peixePescado.src = "peixes/carpaDef.png"
             telaDoPeixe.querySelector('h3').innerHTML = 'carpa'
             aumentarPontuação(1)
-        }
-    }}
-    
+        }}}
     if(qdpfisgados >= 4){
         ReAddPeixes();
-        alert('os peixes serão readicionados')
-    }
- }
- setInterval(fisgar, 100)
+        alert('os peixes serão readicionados');
+    }}
+ 
 
  var btMP = document.querySelector('.voltar2')
  btMP.addEventListener('click', function(){
@@ -306,5 +296,5 @@ var qdpfisgados = 0;
  var pt = 0;
  function aumentarPontuação(pontos){
         pt += pontos  
-        pontuação.querySelector('h2').innerHTML = `Pontuação atual: ${pt}`
+        pontuação.querySelector('h2').innerHTML = `Pontuação atual: ${pt}`;
  }

@@ -263,8 +263,8 @@ h1{
      background-position: center;
     background-size: cover;
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 70px;
     margin-top: -500px;
     transition: margin-left 1.5s ease-in-out;
     transform: rotateY(180deg);
