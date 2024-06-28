@@ -89,6 +89,7 @@ body{
     }
 }
 .entrada{
+    backdrop-filter: blur(7px);
     position: absolute;
     display: flex;
     justify-content: center;
@@ -170,8 +171,15 @@ h1{
     height: 40px;
     background-color: rgba(0, 0, 0, 0.534);
     border-radius: 10px;
-    margin-top: -510px;
-    margin-right: 500px;
+}
+.alerta{
+    position: absolute;
+    margin-left: 20%
+}
+.peixePesc{
+    position: absolute;
+    margin-top: 50vh;
+    margin-left: 34%;
 }
 .voltar:hover, .voltar2:hover{
     color: aqua;
@@ -250,6 +258,8 @@ h1{
 }
 /*Peixes:*/
 .peixes{
+    position: absolute;
+    z-index: 1;
      background-position: center;
     background-size: cover;
     position: absolute;
@@ -261,9 +271,11 @@ h1{
 }
 .carpaDef{
     background-image: url("peixes/carpaDef.png");
+    position: absolute;
 }
 .carpa{
     background-image: url("peixes/carpa.png");
+    position: absolute;
 }
 .ferupa{
     background-image: url("peixes/ferupa.png");
@@ -276,8 +288,8 @@ h1{
 }
 /*ao pescar o peixe isso vai aparecer:*/
 .peixe_pescado{
+    backdrop-filter: blur(7px);
     position: absolute;
-    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -288,20 +300,23 @@ h1{
     border-width: 5px;
     color: aliceblue;
     font-size: 30px;
-    margin-top: -1200px;
+    margin-top: -90%;
     margin-left: 300px;
     width: 600px;
-    height: 550px;
+    height: 60vh;
     padding: 40px;
 }
 .carpaImg{
+    position: absolute;
+    margin-left: 15%;
+    margin-top: 4vh;
     width: 400px;
 }
 .pontuação {
     width: 250px;
     height: 33px;
     border: solid black;
-    display: flex;
+    display: none;
     position: absolute;
     margin-top: -46px;
     font-size: 12px;
@@ -311,4 +326,9 @@ h1{
     border-radius: 40px;
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.247);
+}
+.player{
+    position: absolute;
+    margin-top: calc(-280px + 46vh);
+    
 }

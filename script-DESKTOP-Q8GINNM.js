@@ -53,7 +53,7 @@ function jogar(){
     entrada.style.display = 'none'
     pausa.style.display = 'block'
     nuvem.style.animation = 'movimentodasnuvens 200s linear infinite'
-    
+    pontuação.style.display = 'flex'
     jogando = true
 }
 const aeb = document.getElementById('escolhaDoBarco')
@@ -129,6 +129,7 @@ function EscolherBarco(){
     entrada.style.display = 'flex'
     pausa.style.display = 'none'
     nuvem.style.animation = "none"
+    pontuação.style.display = 'none'
  })
  //adicionar peixes:
 
@@ -271,13 +272,13 @@ var qdpfisgados = 0;
 
         if(pexe[i].classList.contains('carpa')){
         pexe[i].remove()
-        telaDoPeixe.style.display = 'flex'
+        telaDoPeixe.style.display = 'block'
         peixePescado.src = "peixes/carpa.png"
         telaDoPeixe.querySelector('h3').innerHTML = 'salmão'
         aumentarPontuação(2)
         } else if(pexe[i].classList.contains('carpaDef')){
             pexe[i].remove()
-            telaDoPeixe.style.display = 'flex'
+            telaDoPeixe.style.display = 'block'
             peixePescado.src = "peixes/carpaDef.png"
             telaDoPeixe.querySelector('h3').innerHTML = 'carpa'
             aumentarPontuação(1)
