@@ -1,0 +1,208 @@
+body{
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    background: linear-gradient(90deg, blue -10%,lightblue 50%, blue 110%);
+}
+header{
+    margin-top: -22px;
+    height: 15vh;
+    background-color: aqua;
+}
+button:hover{
+    opacity: 0.7;
+}
+.cabeçalho{
+    margin-left: 20px;
+    color: rgb(0, 0, 0);
+}
+.hf{
+    margin-top: 10px;
+    background-color: rgb(0, 119, 255);
+    height: 7.2vh;
+}
+.hfdiv{
+    margin-left: 30px;
+    height: 6vh;
+    color: rgb(0, 0, 0);
+}
+.bt{
+    cursor: pointer;
+    height: 60px;
+    width: 120px;
+    margin-left: 20px;
+    margin-top: 2.5vh;
+    border: solid black;
+    background-color: rgb(0, 255, 255);
+    border-radius: 10px;
+    position: absolute;
+    font-size: 20px;
+    z-index: 1;
+}
+.tituloLj{
+    color: aliceblue;
+    margin-left: 20vw;
+}
+.jogar{
+    position: relative;                 
+    width: 120px;
+    height: 60px;
+}
+.escBarco{
+    margin-top: 20px;
+}
+.escVara{
+    margin-top: 110px;
+}
+.aLoja{
+    margin-top: 200px;
+}
+.aquario{
+    margin-top: 290px;
+}
+.frente{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+}
+.moedas{
+    margin-top: 20px;
+    margin-left: 80vw;
+    padding: 5px;
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    border: solid black;
+    border-radius: 10px;
+    color: black;
+}
+.img1{
+    position: absolute;
+    width: 300px;
+    margin-left: 700px;
+    margin-top: 280px;
+    rotate: 30deg;
+}
+.img2{
+    position: absolute;
+    width: 300px;
+    margin-left: 280px;
+    margin-top: 280px;
+    transform: rotateY(180deg) rotate(30deg);
+}
+.Aloja{
+    overflow: auto;
+    display: none;
+    z-index: 2;
+    top: 7vh;
+    left: 7vw;
+    position: absolute;
+    width: 85vw;
+    height: 85vh;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: solid rgb(0, 119, 119);
+    border-width: 4px;
+}
+.LHead h1{
+    position: absolute;
+    margin-left: 300px;
+    font-size: 40px;
+}
+.LHead h2{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 650px;
+}
+.sect{
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 80%;
+    height: 800px;
+    border: solid aqua;
+}
+.sect h1{
+    color: aliceblue;
+    margin-left: 30px;
+    font-size: 30px;
+}
+.Aloja button{
+    position: fixed;
+}
+.loginButton{
+    background-color: aqua;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -1px 1px 5px black;
+    margin-top: 2vh;
+    height: 3vh;
+    width: 5vw;
+}
+.jogadorLogado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: -1px 1px 5px black;
+    position: absolute;
+    margin-top: -4vh;
+    margin-left: 50vw;
+    height: 5vh;
+    width: 40vw;
+}
+#loginArea{
+    display: none;
+}
+.logArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     margin-top: 10vh;
+    margin-left: 30vw;
+    position: absolute;
+    height: 60vh;
+    width: 40vw;
+    background-color: rgb(90, 228, 228);
+    border: solid rgb(5, 116, 79);
+    border-radius: 20px;
+}
+.logArea .logHead{
+    margin-top: -50px;
+    height: 10vh;
+    width: 30vw;
+    text-align: center;
+    background-color: rgb(0, 96, 206);
+    border-radius: 20px;
+    
+}
+.logArea button{
+    cursor: pointer;
+    background-color: aqua;
+    border: solid black;
+    border-width: 1.5px;
+    border-radius: 7px;
+    width: 10vw;
+    height: 3vh;
+    box-shadow: -1px 1px 5px black;
+}
+.logArea .bt{
+    width: 50px;
+    margin-left: -34vw;
+    margin-top: -52vh;
+}
+#cadastro, #logarDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

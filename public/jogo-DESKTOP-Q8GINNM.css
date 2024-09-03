@@ -1,0 +1,304 @@
+.mar{
+    margin-top: 50vh;
+    position: relative;
+    height: 600px;
+    width: 100vw;
+    background-color: rgba(0, 153, 255, 0.449);
+    margin-left: -9px;
+    z-index: 2;
+}
+.sol{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgb(251, 255, 0);
+    margin-left: 900px;
+    margin-top: 50px;
+}
+body{
+    background-color: lightblue;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+.player{
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    margin-left: 500px;
+    transition: left 0.7s linear; 
+    z-index: 2;
+}
+.barco{
+    width: 300px;
+    height: 80px;
+    position: relative;
+    margin-top: 405px;
+    border-bottom-right-radius: 130%;
+    border-bottom-left-radius: 130%;
+    border: solid rgb(94, 94, 94);
+    border-width: 1px;
+    z-index: 3;
+    transform-origin: left;
+}
+.mel{
+    position: absolute;
+    margin-top: 280px;
+    width: 100px;
+    margin-left: 100px;
+    z-index: 1;
+}
+.vara{
+    margin-top: 260px;
+    margin-left: 170px;
+    width: 170px;
+    position: absolute;
+    z-index: 2;
+}
+.ilha{
+    background-color: green;
+    width: 700px;
+    height: 300px;
+    margin-top: 17.1vh;
+    position: absolute;
+    z-index: 1;
+    border-top-left-radius: 90%;
+    border-top-right-radius: 90%;
+}
+.arvore{
+    width: 200px;
+    margin-top: -150px;
+    margin-left: 70px;
+}
+.ar2{
+    margin-left: 500px;
+}
+.nuvem{
+    position: absolute;
+    width: 1700px;
+    margin-top: -550px;
+    margin-left: -1500px;
+    animation: movimentodasnuvens 200s linear infinite;
+}
+@keyframes movimentodasnuvens {
+    0%{
+        margin-left: -1400px;
+    }
+    100%{
+        margin-left: 100%;
+    }
+}
+.entrada{
+    backdrop-filter: blur(7px);
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 98vw;
+    margin-top: -150px;
+    background-color: rgba(0, 0, 0, 0.397);
+    border: solid aquamarine;
+    z-index: 4;
+    border-radius: 40px;
+    border-width: 5px;
+    flex-direction: column;
+    color: aliceblue;
+    font-size: 30px;
+}
+button{
+    padding: 10px 20px;
+    width: 300px;
+    border-radius: 40px;
+    font-size: 20px;
+    margin-top: 30px;
+    border: solid aqua;
+    background-color: rgb(129, 129, 129);
+    cursor: pointer;
+    display: inline-block;
+}
+button:hover{
+    background-color: aqua ;
+    border: solid rgb(129, 129, 129);
+    cursor: pointer;
+}
+h1{
+    margin-top: -200px;
+    -webkit-text-stroke: 2px black;
+}
+.linhaDaVara{
+    position: absolute;
+    background-color: black;
+    width: 0px;
+    height: 1.5px;
+    margin-left: 313px;
+    margin-top: 289px;
+    z-index: 2;
+    transition: width 2s, transform 1.5s;
+    transform-origin: left;
+}
+.EscBarco {
+    display: none;
+}
+.voltar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3px;
+    color: beige;
+    font-size: 40px;
+    font-weight: 400;
+    border: solid rgb(190, 190, 190);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.534);
+    border-radius: 10px;
+    margin-top: -710px;
+    margin-left: -1140px;
+}
+.voltar2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3px;
+    color: beige;
+    border: solid rgb(190, 190, 190);
+    font-size: 40px;
+    font-weight: 400;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.534);
+    border-radius: 10px;
+}
+.alerta{
+    position: absolute;
+    margin-left: 20%
+}
+.peixePesc{
+    position: absolute;
+    margin-top: 50vh;
+    margin-left: 34%;
+}
+.voltar:hover, .voltar2:hover{
+    color: aqua;
+    cursor: pointer;
+}
+.baE{
+    width: 80vw;
+    height: 80vh;
+    border: solid black;
+    position: absolute;
+}
+.BarcosAE{
+    margin-left: 20px;
+    width: 120px;
+    height: 100px;
+    border: solid white;
+}
+.cordebar{
+    width: 100px;
+    height: 27px;
+    margin-top: 20px;
+    border-bottom-right-radius: 130%;
+    border-bottom-left-radius: 130%;
+    z-index: 3;
+    transform-origin: left;
+}
+/*cor do barco:*/
+.b0{
+    background-color: rgb(143, 58, 24);
+}
+
+/*botão de pause:*/
+.lin{
+    background-color: black;
+    width: 30px;
+    height: 5px;
+    margin-top: 3px;
+}
+.pausebt{
+    margin-top: 5px;
+    display: block;
+    position: absolute;
+    z-index: 5;
+}
+/*Peixes:*/
+.peixes{
+    position: absolute;
+    z-index: 1;
+     background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: 140px;
+    height: 70px;
+    margin-top: -500px;
+    transition: margin-left 1.5s ease-in-out;
+    transform: rotateY(180deg);
+}
+.carpaDef{
+    background-image: url("peixes/carpaDef.png");
+    position: absolute;
+}
+.carpa{
+    background-image: url("peixes/carpa.png");
+    position: absolute;
+}
+.ferupa{
+    background-image: url("peixes/ferupa.png");
+}
+.anzol{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    margin-left: 100%;
+}
+/*ao pescar o peixe isso vai aparecer:*/
+.peixe_pescado{
+    backdrop-filter: blur(7px);
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.397);
+    border: solid aquamarine;
+    z-index: 4;
+    border-radius: 40px;
+    border-width: 5px;
+    color: aliceblue;
+    font-size: 30px;
+    margin-top: -90%;
+    margin-left: 300px;
+    width: 600px;
+    height: 60vh;
+    padding: 40px;
+}
+.carpaImg{
+    position: absolute;
+    margin-left: 15%;
+    margin-top: 4vh;
+    width: 400px;
+}
+.pontuação {
+    width: 250px;
+    height: 33px;
+    border: solid black;
+    display: none;
+    position: absolute;
+    margin-top: -46px;
+    font-size: 12px;
+    z-index: 7;
+    align-items: center;
+    padding: 3px;
+    border-radius: 40px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.247);
+}
+.player{
+    position: absolute;
+    margin-top: calc(-280px + 46vh);
+    
+}
